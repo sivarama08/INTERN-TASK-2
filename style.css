@@ -1,0 +1,276 @@
+/*for all*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*font*/
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    /*  to move evrything in one line*/
+    display: flex;
+    width: 90%;
+    height: 10vh;
+    margin: auto;
+    align-items: center;
+}
+
+.logo-container, .nav-links, .cart {
+    display: flex;
+}
+
+/*margin = to get space between three dots and img*/
+
+.logo {
+    font-weight: 400;
+    margin: 5px;
+}
+
+/*three classes : logo nav cart*/
+
+.logo-container {
+    /*   background-color: aquamarine; */
+    /*    to expand and take up all space*/
+    flex: 1;
+}
+
+/*nav was a tag in idx html*/
+
+nav {
+    /*    background-color: greenyellow; */
+    flex: 2;
+}
+
+.nav-links {
+    justify-content: space-around;
+    font-size: 18px;
+}
+
+.nav-link {
+    /*    to remove underline*/
+    text-decoration: none;
+    color: #5f5f79;
+}
+
+.cart {
+    /*    background-color: indianred; */
+    flex: 1;
+    align-content: stretch;
+}
+
+.presentation {
+    display: flex;
+    /*    just like header*/
+    width: 90%;
+    margin: auto;
+    min-height: 80vh;
+    /*    background-color: deeppink;*/
+    align-items: center;
+}
+
+.intro-text h1 {
+    font-size: 44px;
+    font-weight: 500;
+    background: linear-gradient(to right, lightgrey, #6f6f89);
+    -webkit-background-clip: text;
+    /*    -webkit-text-fill-color: transparent;*/
+}
+
+.cover {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+}
+
+.cover img {
+    /*    to take the height of the cover*/
+    height: 100%;
+    /*    to add shadow to the laptop PNG */
+    filter: drop-shadow(0px 5px 3px black);
+    /*    name of animation is drop*/
+    animation: drop 1.5s ease;
+}
+
+.introduction {
+    /*    background-color: lightblue;*/
+    flex: 1;
+}
+
+.intro-text p {
+    margin-top: 5px;
+    font-size: 22px;
+    color: #585772;
+}
+
+.cta {
+    /*    top right bottom left vals for padding*/
+    padding: 50px 0px 0px 0px;
+}
+
+.cta-select {
+    border: 2px solid #c36cbb;
+    background: transparent;
+    color: #c36cbb;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cta-select a {
+    text-decoration: none;
+    color: #c36cbb;
+}
+
+.cta-add {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    margin: 30px 0px 0px 30px;
+    background-image: linear-gradient(to right, #c36cbb 0%, #ffabf4 50%);
+}
+
+.cta-add a {
+    text-decoration: none;
+    color: white;
+}
+
+/*to set the positions of the circle*/
+
+.big-circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*    to move the circle in the back of laptop*/
+    z-index: -1;
+    opacity: 0.5;
+    height: 80%;
+}
+
+.medium-circle {
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    z-index: -1;
+    height: 60%;
+    opacity: 0.4;
+}
+
+.small-circle {
+    position: absolute;
+    bottom: 0%;
+    left: 20%;
+    z-index: -1;
+}
+
+.laptop-select {
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    right: 20%;
+}
+
+/*for dropdown animation*/
+
+@keyframes drop {
+    0% {
+        /*        start animation from invisible*/
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    /*    ending animation with 100%*/
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/*responsive*/
+
+@media screen and (max-width: 1024px) .presentation {
+    flex-direction: column;
+}
+
+.introduction {
+    margin-top: 5vh;
+    text-align: center;
+}
+
+.intro-text h1 {
+    font-size: 30px;
+}
+
+.intro-text p {
+    font-size: 18px;
+}
+
+.cta {
+    padding: 10px 0px 0px 0px;
+}
+
+.head-ings {
+    padding: 30px 0px 0px 0px;
+    font-size: 180%;
+    text-align: center;
+    justify-content: center;
+    opacity: 1;
+    /*    text-shadow: 2px 2px 3px silver;*/
+}
+
+.head-ings {
+    font-weight: 400;
+}
+
+.con-tent h3 {
+    text-align: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 150%;
+    padding: 50px 100px 100px 100px;
+    opacity: 0.7;
+    font-weight: 100;
+}
+
+.Imgs img {
+    width: 100%;
+    animation: drop 1.5s ease;
+}
+
+.Imgs_2 img {
+    align-self: center;
+}
+
+.footer img {
+    width: 90%;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
